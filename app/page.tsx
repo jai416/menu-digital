@@ -1,9 +1,8 @@
 import Link from "next/link"
-import { getMenuData } from "@/lib/api"
+import menuData from "@/data/menu.json"
 
-export default async function HomePage() {
-  const data = await getMenuData()
-  const { restaurant } = data
+export default function HomePage() {
+  const { restaurant } = menuData
 
   return (
     <main className="min-h-screen">

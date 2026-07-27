@@ -1,12 +1,11 @@
-import { getMenuData } from "@/lib/api"
+import menuData from "@/data/menu.json"
 import Header from "@/components/Header"
 import QrBanner from "@/components/QrBanner"
 import CategorySection from "@/components/CategorySection"
 import Footer from "@/components/Footer"
 
-export default async function MenuPage() {
-  const data = await getMenuData()
-  const { restaurant, categories } = data
+export default function MenuPage() {
+  const { restaurant, categories } = menuData
 
   return (
     <div className="min-h-screen bg-gray-50">
